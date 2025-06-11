@@ -1,12 +1,18 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-interface NavigationProps {
-  prevPage: string | null;
-  nextPage: string | null;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ prevPage, nextPage }) => {
+const Navigation: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Extract current page number from URL
+  const getCurrentPageNumber = (): number => {
+    const match = location.pathname.match(/\/page(\d+)/);
+    return match ? parseInt(match[1], 10) : 1;
+  };
+
+  const currentPage = getCurrentPageNumber();
+  const prevPage = currentPage > 1 ? `/page${currentPage - 1}` : null;
+  const nextPage = `/page${currentPage + 1}`;
 
   return (
     <div className="flex justify-between mt-8">
@@ -23,13 +29,8 @@ const Navigation: React.FC<NavigationProps> = ({ prevPage, nextPage }) => {
       </button>
       
       <button
-        onClick={() => nextPage && navigate(nextPage)}
-        disabled={!nextPage}
-        className={`px-6 py-3 rounded-lg font-medium nav-button ${
-          nextPage
-            ? 'bg-blue-500 text-white hover:bg-blue-600'
-            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-        }`}
+        onClick={() => navigate(nextPage)}
+        className="px-6 py-3 rounded-lg font-medium nav-button bg-blue-500 text-white hover:bg-blue-600"
       >
         次へ
       </button>

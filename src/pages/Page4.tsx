@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 
 const Page4: React.FC = () => {
   return (
-    <Layout title="趣味（ベトナム時代）" prevPage="/page3" nextPage="/page5">
+    <Layout title="趣味（ベトナム時代）">
       <p><strong>趣味：</strong></p>
       <ul className="list-disc list-inside ml-4 space-y-2">
         <li>ランニング</li>

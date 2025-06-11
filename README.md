@@ -196,7 +196,7 @@ All pages use a common `Layout` component that provides:
 ### Component Structure
 
 - **Layout**: Common page template with title, content area, and navigation
-- **Navigation**: Previous/Next buttons with disabled states
+- **Navigation**: Dynamic previous/next buttons that automatically detect current page and handle edge cases
 - **PageIndicator**: Shows current page and progress
 - **KeyboardInstructions**: Displays keyboard navigation hints
 
@@ -217,6 +217,8 @@ All pages use a common `Layout` component that provides:
 - **Type Safety**: Strong TypeScript typing throughout
 - **Clean Separation**: Pages focus only on content, not layout
 - **Consistent UX**: All pages have identical structure and behavior
+- **Dynamic Navigation**: No hard-coded page limits - automatically handles any number of pages
+- **Graceful Fallbacks**: Non-existent pages automatically redirect to default page
 
 ## 📄 License
 
