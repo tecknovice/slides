@@ -6,10 +6,7 @@ A multi-page React application built with Vite, TypeScript, Tailwind CSS, and Re
 
 - 7 pages of self-introduction content in Japanese
 - Navigation between pages with Previous/Next buttons
-- Keyboard navigation support (Left/Right arrow keys)
-- Page indicator with progress bar
 - Responsive design with Tailwind CSS
-- Smooth animations and transitions
 - Modern React with TypeScript
 - Ready for deployment on GitHub Pages
 
@@ -38,9 +35,7 @@ introduction/
 │   │   ├── Page6.tsx - 経歴と今後 (Career & Future)
 │   │   └── Page7.tsx - 終わり (Conclusion)
 │   ├── components/
-│   │   ├── Navigation.tsx - Navigation component
-│   │   ├── PageIndicator.tsx - Page indicator with progress
-│   │   └── KeyboardInstructions.tsx - Keyboard navigation hints
+│   │   └── Navigation.tsx - Navigation component
 │   ├── App.tsx - Main app with routing
 │   ├── main.tsx - Entry point
 │   └── index.css - Global styles
@@ -86,48 +81,15 @@ npm run dev
 
 ## 🌐 Deployment to GitHub Pages
 
-### Quick Deploy
-
-1. Make sure your repository is pushed to GitHub:
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
+1. Update the `homepage` field in `package.json` with your GitHub username:
+```json
+"homepage": "https://YOUR_USERNAME.github.io/introduction"
 ```
 
 2. Deploy to GitHub Pages:
 ```bash
 npm run deploy
 ```
-
-### Manual Setup
-
-1. Update the `homepage` field in `package.json` with your GitHub username:
-```json
-"homepage": "https://YOUR_USERNAME.github.io/introduction"
-```
-
-2. Update the `base` in `vite.config.ts` if needed:
-```ts
-export default defineConfig({
-  base: '/your-repo-name/',
-  // ... rest of config
-})
-```
-
-3. Deploy:
-```bash
-npm run deploy
-```
-
-### GitHub Pages Settings
-
-After deployment, make sure to:
-1. Go to your repository settings
-2. Navigate to "Pages" section
-3. Set source to "Deploy from a branch"
-4. Select `gh-pages` branch
-5. Click Save
 
 The site will be available at `https://YOUR_USERNAME.github.io/introduction`
 
@@ -142,11 +104,7 @@ The site will be available at `https://YOUR_USERNAME.github.io/introduction`
 - **/page6** - 経歴と今後 (Career & Future)
 - **/page7** - 終わり (Conclusion)
 
-### Navigation Methods
-
-1. **Button Navigation**: Use "前へ" (Previous) and "次へ" (Next) buttons
-2. **Keyboard Navigation**: Use left (←) and right (→) arrow keys
-3. **Direct URL**: Navigate directly to any page using `/page1`, `/page2`, etc.
+Use the "前へ" (Previous) and "次へ" (Next) buttons to navigate between pages.
 
 ## 📱 Responsive Design
 
@@ -155,35 +113,14 @@ The application is fully responsive and works well on:
 - Tablets
 - Mobile phones
 
-## 🎨 Styling & UI Features
+## 🎨 Styling
 
-- **Clean, modern design** with Tailwind CSS
-- **Card-based layout** for each page
-- **Smooth animations** and page transitions
-- **Page indicator** with progress bar
-- **Keyboard navigation hints** in the bottom-right corner
-- **Consistent typography** optimized for Japanese text
-- **Hover effects** on interactive elements
-- **Disabled states** for navigation buttons at the beginning/end
-
-## 🎯 Page Content
-
-1. **Page 1 - 挨拶 (Greeting)**: Introduction and welcome message
-2. **Page 2 - 基本情報 (Basic Information)**: Personal details and background
-3. **Page 3 - 学歴と日本に来た経緯 (Education & Coming to Japan)**: Educational background and journey to Japan
-4. **Page 4 - 趣味（ベトナム時代） (Hobbies in Vietnam)**: Hobbies and activities in Vietnam
-5. **Page 5 - 趣味（現在） (Current Hobbies)**: Current hobbies and interests
-6. **Page 6 - 経歴と今後 (Career & Future)**: Career history and future plans
-7. **Page 7 - 終わり (Conclusion)**: Closing remarks and thanks
-
-## 🔧 Development Notes
-
-- Uses React 19 with TypeScript for type safety
-- Vite for fast development and optimized builds
-- Tailwind CSS for utility-first styling
-- React Router DOM for client-side routing
-- Custom hooks for keyboard navigation
-- Responsive design with mobile-first approach
+The application uses Tailwind CSS for styling with:
+- Clean, modern design
+- Centered content with max-width containers
+- Card-based layout for each page
+- Consistent spacing and typography
+- Disabled state for navigation buttons at the beginning/end
 
 ## 📄 License
 

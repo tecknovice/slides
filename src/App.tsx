@@ -1,13 +1,51 @@
-import { useState } from 'react'
+import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import Page1 from './pages/Page1';
+import Page2 from './pages/Page2';
+import Page3 from './pages/Page3';
+import Page4 from './pages/Page4';
+import Page5 from './pages/Page5';
+import Page6 from './pages/Page6';
+import Page7 from './pages/Page7';
+import KeyboardInstructions from './components/KeyboardInstructions';
+import PageIndicator from './components/PageIndicator';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const currentPath = location.pathname;
+      const pageNumber = parseInt(currentPath.replace('/page', ''));
+      
+      if (event.key === 'ArrowLeft' && pageNumber > 1) {
+        navigate(`/page${pageNumber - 1}`);
+      } else if (event.key === 'ArrowRight' && pageNumber < 7) {
+        navigate(`/page${pageNumber + 1}`);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [navigate, location]);
 
   return (
-    <h1 className="text-3xl font-bold underline text-center text-blue-500">
-    Hello world!
-  </h1>
-  )
+    <>
+      <Routes>
+        <Route path="/" element={<Navigate to="/page1" replace />} />
+        <Route path="/page1" element={<Page1 />} />
+        <Route path="/page2" element={<Page2 />} />
+        <Route path="/page3" element={<Page3 />} />
+        <Route path="/page4" element={<Page4 />} />
+        <Route path="/page5" element={<Page5 />} />
+        <Route path="/page6" element={<Page6 />} />
+        <Route path="/page7" element={<Page7 />} />
+      </Routes>
+      <PageIndicator />
+      <KeyboardInstructions />
+    </>
+  );
 }
 
 export default App
