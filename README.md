@@ -38,6 +38,7 @@ introduction/
 │   │   ├── Page6.tsx - 経歴と今後 (Career & Future)
 │   │   └── Page7.tsx - 終わり (Conclusion)
 │   ├── components/
+│   │   ├── Layout.tsx - Common layout component
 │   │   ├── Navigation.tsx - Navigation component
 │   │   ├── PageIndicator.tsx - Page indicator with progress
 │   │   └── KeyboardInstructions.tsx - Keyboard navigation hints
@@ -176,14 +177,46 @@ The application is fully responsive and works well on:
 6. **Page 6 - 経歴と今後 (Career & Future)**: Career history and future plans
 7. **Page 7 - 終わり (Conclusion)**: Closing remarks and thanks
 
+## 🏗️ Architecture
+
+### Layout Component
+
+All pages use a common `Layout` component that provides:
+- Consistent page structure and styling
+- Automatic navigation integration
+- Responsive design
+- Japanese text optimization
+
+```tsx
+<Layout title="Page Title" prevPage="/prev" nextPage="/next">
+  <p>Your content here...</p>
+</Layout>
+```
+
+### Component Structure
+
+- **Layout**: Common page template with title, content area, and navigation
+- **Navigation**: Previous/Next buttons with disabled states
+- **PageIndicator**: Shows current page and progress
+- **KeyboardInstructions**: Displays keyboard navigation hints
+
 ## 🔧 Development Notes
 
 - Uses React 19 with TypeScript for type safety
 - Vite for fast development and optimized builds
 - Tailwind CSS for utility-first styling
 - React Router DOM for client-side routing
+- Common Layout component for consistent structure
 - Custom hooks for keyboard navigation
 - Responsive design with mobile-first approach
+
+### Code Benefits
+
+- **DRY Principle**: Common layout reduces code duplication
+- **Maintainability**: Layout changes only need to be made once
+- **Type Safety**: Strong TypeScript typing throughout
+- **Clean Separation**: Pages focus only on content, not layout
+- **Consistent UX**: All pages have identical structure and behavior
 
 ## 📄 License
 
