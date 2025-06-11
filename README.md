@@ -158,6 +158,8 @@ The application is fully responsive and works well on:
 
 ## 🎨 Styling & UI Features
 
+- **Full Viewport Layout** - Pages utilize the entire browser window for immersive presentation
+- **Flexbox Design** - Content is centered and responsive across all screen sizes
 - **Clean, modern design** with Tailwind CSS
 - **Card-based layout** for each page
 - **Smooth animations** and page transitions
@@ -188,10 +190,17 @@ All pages use a common `Layout` component that provides:
 - Japanese text optimization
 
 ```tsx
-<Layout title="Page Title" prevPage="/prev" nextPage="/next">
+<Layout title="Page Title">
   <p>Your content here...</p>
 </Layout>
 ```
+
+The layout automatically:
+- Covers the full browser viewport (100% width and height)
+- Centers content both horizontally and vertically
+- Provides responsive design for all screen sizes
+- Includes smooth animations and consistent styling
+- Handles navigation automatically without needing to specify previous/next pages
 
 ### Component Structure
 
