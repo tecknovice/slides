@@ -1,4 +1,6 @@
-
+---
+applyTo: '**'
+---
 
 # 🧑‍💻 Nguyen Van Hung - Self Introduction Presentation (React + GitHub Pages)
 
