@@ -2,16 +2,40 @@ import Layout from '../components/Layout';
 
 const Page4: React.FC = () => {
   return (
-    <Layout title="趣味">
-      <p><strong>趣味：</strong></p>
-      <ul className="list-disc list-inside ml-4 space-y-2 mt-2">
-        <li>ランニング</li>
-        <li>水泳</li>
-        <li>ジム</li>
-        <li>読書（ベトナム語の本が多いですが、英語の本も少し読みます）</li>
-        <li>ゲーム（Rome Total War、MOBA、Counter Strike、Age of Empiresなど）</li>
-      </ul>
-      <p className="mt-6">特にベトナムにいる間は運動をたくさんしていました。</p>
+    <Layout title="日本に来た経緯">
+      <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* 2016 - Japanese Study */}
+          <div className="text-center">
+            <img 
+              src="/slides/images/hachiko_2016.jpg" 
+              alt="2016年渋谷ハチ公前" 
+              className="w-full max-h-80 object-contain rounded-lg shadow-lg mb-4"
+            />
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-blue-600">2016年</h3>
+              <p className="text-sm text-gray-600">東京で日本語を勉強していました</p>
+            </div>
+          </div>
+
+          {/* 2024 - Work in Japan */}
+          <div className="text-center">
+            <img 
+              src="/slides/images/hachiko_2024.jpg" 
+              alt="2024年渋谷ハチ公前" 
+              className="w-full max-h-80 object-contain rounded-lg shadow-lg mb-4"
+            />
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-green-600">2024年</h3>
+              <p className="text-sm text-gray-600">日本で働くために戻ってきました</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="text-center mt-6">
+          <p>1年半前に日本に来ました。</p>
+        </div>
+      </div>
     </Layout>
   );
 };
