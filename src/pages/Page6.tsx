@@ -12,7 +12,6 @@ const Page6: React.FC = () => {
         <li>読書（ベトナム語の本が多いですが、英語の本も少し読みます）</li>
         <li>ゲーム（Rome Total War、MOBA など）</li>
       </ul>
-      <p className="mt-6">特にベトナムにいる間は運動をたくさんしていました。</p>
     </Layout>
   );
 };
