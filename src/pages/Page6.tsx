@@ -1,10 +1,11 @@
 import Layout from '../components/Layout';
 
-const Page5: React.FC = () => {
+const Page6: React.FC = () => {
   return (
     <Layout title="趣味">
-      <p><strong>趣味：</strong></p>
-      <ul className="list-disc list-inside ml-4 space-y-2 mt-2">
+      <p className="mb-4"><strong>趣味：</strong></p>
+      <ul className="list-disc list-inside ml-4 space-y-2">
+        <li>旅行</li>
         <li>ランニング</li>
         <li>水泳</li>
         <li>ジム</li>
@@ -16,4 +17,4 @@ const Page5: React.FC = () => {
   );
 };
 
-export default Page5;
+export default Page6;
