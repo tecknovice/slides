@@ -1,50 +1,45 @@
-# 🧑‍💻 Nguyen Van Hung - Self Introduction Presentation
+# 🧑‍💻 Nguyen Van Hung - Self Introduction Presentation (React + GitHub Pages)
 
-A multi-page React application built with Vite, TypeScript, Tailwind CSS, and React Router for a self-introduction presentation in Japanese.
+A static, multi-page React site simulating a slide deck, entirely in Japanese. Each page is its own route (/pageX) with Next/Previous navigation.
 
 ## 🚀 Features
 
-- 7 pages of self-introduction content in Japanese
+- 6 pages of self-introduction content in Japanese
 - Navigation between pages with Previous/Next buttons
-- Keyboard navigation support (Left/Right arrow keys)
-- Page indicator with progress bar
+- Keyboard navigation support (Left/Right arrow keys, optional enhancement)
 - Responsive design with Tailwind CSS
-- Smooth animations and transitions
-- Modern React with TypeScript
-- Ready for deployment on GitHub Pages
+- Smooth slide transition animations (optional enhancement with framer-motion)
+- Modern React 18+ with TypeScript
+- Deployed on GitHub Pages
 
-## 🛠️ Technologies Used
+## 🛠️ Tools & Libraries
 
-- **React 19** - UI library
+- **React 18+** - UI library
 - **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
+- **Vite** - Build tool and dev server (recommended for GitHub Pages)
 - **Tailwind CSS** - Styling
-- **React Router DOM** - Client-side routing
-- **GitHub Pages** - Deployment
+- **react-router-dom** - Page routing
+- **gh-pages** - Deployment package
 
 ## 📁 Project Structure
 
 ```
-introduction/
+self-intro-presentation/
 ├── public/
 │   └── index.html
 ├── src/
 │   ├── pages/
-│   │   ├── Page1.tsx - 挨拶 (Greeting)
-│   │   ├── Page2.tsx - 基本情報 (Basic Information)
-│   │   ├── Page3.tsx - 学歴と日本に来た経緯 (Education & Coming to Japan)
-│   │   ├── Page4.tsx - 趣味（ベトナム時代） (Hobbies in Vietnam)
-│   │   ├── Page5.tsx - 趣味（現在） (Current Hobbies)
-│   │   ├── Page6.tsx - 経歴と今後 (Career & Future)
-│   │   └── Page7.tsx - 終わり (Conclusion)
+│   │   ├── Page1.tsx
+│   │   ├── Page2.tsx
+│   │   ├── Page3.tsx
+│   │   ├── Page4.tsx
+│   │   ├── Page5.tsx
+│   │   └── Page6.tsx
 │   ├── components/
-│   │   ├── Layout.tsx - Common layout component
-│   │   ├── Navigation.tsx - Navigation component
-│   │   ├── PageIndicator.tsx - Page indicator with progress
-│   │   └── KeyboardInstructions.tsx - Keyboard navigation hints
-│   ├── App.tsx - Main app with routing
-│   ├── main.tsx - Entry point
-│   └── index.css - Global styles
+│   │   └── Navigation.tsx
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
 ├── package.json
 ├── tsconfig.json
 └── vite.config.ts
@@ -75,7 +70,7 @@ npm install
 npm run dev
 ```
 
-4. Open your browser and visit `http://localhost:5174/introduction/`
+4. Open your browser and visit `http://localhost:5174/`
 
 ## 📝 Available Scripts
 
@@ -85,7 +80,21 @@ npm run dev
 - `npm run lint` - Run ESLint
 - `npm run deploy` - Deploy to GitHub Pages
 
-## 🌐 Deployment to GitHub Pages
+## 🧪 Testing
+- Test all page links: `/page1`, `/page2`, `/page3`, `/page4`, `/page5`, `/page6`
+- Ensure GitHub Pages works with correct basename in router
+
+## ✨ Optional Enhancements
+- Add slide transition animation (e.g., framer-motion)
+- Support keyboard left/right navigation
+- Responsive styling for mobile view
+
+## 🚀 Deployment
+
+### Prerequisites
+- Use [GitHub Pages](https://pages.github.com/)
+- Add `"homepage": "https://<username>.github.io/self-intro-presentation"` in `package.json`
+- Deploy using `gh-pages` package
 
 ### Quick Deploy
 
@@ -130,104 +139,79 @@ After deployment, make sure to:
 4. Select `gh-pages` branch
 5. Click Save
 
-The site will be available at `https://YOUR_USERNAME.github.io/introduction`
+## 🧭 Routing & Navigation
 
-## 🧭 Navigation
+- Use `react-router-dom`
+- Each page has a URL: `/page1`, `/page2`, `/page3`, `/page4`, `/page5`, `/page6`
+- Navigation buttons link to next and previous page
+- No dynamic content; all static
 
-- **Home (/)** - Redirects to Page 1
-- **/page1** - 挨拶 (Greeting)
-- **/page2** - 基本情報 (Basic Information)
-- **/page3** - 学歴と日本に来た経緯 (Education & Coming to Japan)
-- **/page4** - 趣味（ベトナム時代） (Hobbies in Vietnam)
-- **/page5** - 趣味（現在） (Current Hobbies)
-- **/page6** - 経歴と今後 (Career & Future)
-- **/page7** - 終わり (Conclusion)
+### Navigation Component
 
-### Navigation Methods
-
-1. **Button Navigation**: Use "前へ" (Previous) and "次へ" (Next) buttons
-2. **Keyboard Navigation**: Use left (←) and right (→) arrow keys
-3. **Direct URL**: Navigate directly to any page using `/page1`, `/page2`, etc.
-
-## 📱 Responsive Design
-
-The application is fully responsive and works well on:
-- Desktop computers
-- Tablets
-- Mobile phones
-
-## 🎨 Styling & UI Features
-
-- **Full Viewport Layout** - Pages utilize the entire browser window for immersive presentation
-- **Flexbox Design** - Content is centered and responsive across all screen sizes
-- **Clean, modern design** with Tailwind CSS
-- **Card-based layout** for each page
-- **Smooth animations** and page transitions
-- **Page indicator** with progress bar
-- **Keyboard navigation hints** in the bottom-right corner
-- **Consistent typography** optimized for Japanese text
-- **Hover effects** on interactive elements
-- **Disabled states** for navigation buttons at the beginning/end
-
-## 🎯 Page Content
-
-1. **Page 1 - 挨拶 (Greeting)**: Introduction and welcome message
-2. **Page 2 - 基本情報 (Basic Information)**: Personal details and background
-3. **Page 3 - 学歴と日本に来た経緯 (Education & Coming to Japan)**: Educational background and journey to Japan
-4. **Page 4 - 趣味（ベトナム時代） (Hobbies in Vietnam)**: Hobbies and activities in Vietnam
-5. **Page 5 - 趣味（現在） (Current Hobbies)**: Current hobbies and interests
-6. **Page 6 - 経歴と今後 (Career & Future)**: Career history and future plans
-7. **Page 7 - 終わり (Conclusion)**: Closing remarks and thanks
-
-## 🏗️ Architecture
-
-### Layout Component
-
-All pages use a common `Layout` component that provides:
-- Consistent page structure and styling
-- Automatic navigation integration
-- Responsive design
-- Japanese text optimization
+Props:
+- `prevPage: string | null`
+- `nextPage: string | null`
 
 ```tsx
-<Layout title="Page Title">
-  <p>Your content here...</p>
-</Layout>
+<Button onClick={() => navigate(prevPage)}>前へ</Button>
+<Button onClick={() => navigate(nextPage)}>次へ</Button>
 ```
 
-The layout automatically:
-- Covers the full browser viewport (100% width and height)
-- Centers content both horizontally and vertically
-- Provides responsive design for all screen sizes
-- Includes smooth animations and consistent styling
-- Handles navigation automatically without needing to specify previous/next pages
+## 🖼️ UI Components
 
-### Component Structure
+### 📄 Each Page Template
 
-- **Layout**: Common page template with title, content area, and navigation
-- **Navigation**: Dynamic previous/next buttons that automatically detect current page and handle edge cases
-- **PageIndicator**: Shows current page and progress
-- **KeyboardInstructions**: Displays keyboard navigation hints
+- Static content (Japanese)
+- Layout: Title + content + Prev/Next buttons
+- Tailwind CSS (centered content, max-width, padding, font styling)
 
-## 🔧 Development Notes
+## 🗒️ Page Content (Japanese)
 
-- Uses React 19 with TypeScript for type safety
-- Vite for fast development and optimized builds
-- Tailwind CSS for utility-first styling
-- React Router DOM for client-side routing
-- Common Layout component for consistent structure
-- Custom hooks for keyboard navigation
-- Responsive design with mobile-first approach
+### ✅ Page 1 - 挨拶
+はじめまして。
+私はグエン・ヴァン・フンと申します。
+ニックネームは「ヴァン」です。
+このプレゼンテーションでは、自己紹介をさせていただきます。
 
-### Code Benefits
+### ✅ Page 2 - 基本情報
+名前：グエン・ヴァン・フン
+ニックネーム：ヴァン
+生年：1989年（36歳）
+出身：ベトナム・ハノイ
 
-- **DRY Principle**: Common layout reduces code duplication
-- **Maintainability**: Layout changes only need to be made once
-- **Type Safety**: Strong TypeScript typing throughout
-- **Clean Separation**: Pages focus only on content, not layout
-- **Consistent UX**: All pages have identical structure and behavior
-- **Dynamic Navigation**: No hard-coded page limits - automatically handles any number of pages
-- **Graceful Fallbacks**: Non-existent pages automatically redirect to default page
+### ✅ Page 3 - 学歴
+ハノイ工科大学で学びました。
+情報技術を専攻していました。
+
+### ✅ Page 4 - 日本に来た経緯
+2015年：東京で日本語を勉強していました
+2023年：日本で働くために戻ってきました
+
+### ✅ Page 5 - 経歴と今後
+フルスタックウェブ開発者として働いています。
+JavaScript、TypeScript、Node.jsを中心に開発しています。
+いくつかの個人プロジェクトも手がけています。
+いくつかの会社で働いた後、Mazricaに入社しました。
+今後も成長を続け、新しい挑戦をしていきたいと思っています。
+
+### ✅ Page 6 - 趣味
+趣味：
+- 旅行
+- ランニング
+- 水泳
+- ジム
+- 読書（ベトナム語の本が多いですが、英語の本も少し読みます）
+- ゲーム（Rome Total War、MOBA など）
+
+特にベトナムにいる間は運動をたくさんしていました。
+
+### ✅ Default Page - 終わり
+ご清聴ありがとうございました。
+どうぞよろしくお願いいたします。
+
+## ✅ Summary
+
+This project is a static, multi-page React site simulating a slide deck, entirely in Japanese. Each page is its own route (/pageX) with Next/Previous navigation.
 
 ## 📄 License
 
