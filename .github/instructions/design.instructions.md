@@ -103,7 +103,7 @@ JavaScript、TypeScript、Node.jsを中心に開発しています。
 - 水泳
 - ジム
 - 読書（ベトナム語の本が多いですが、英語の本も少し読みます）
-- ゲーム（Rome Total War、MOBA、Counter Strike、Age of Empiresなど）
+- ゲーム（Rome Total War、MOBA など）
 
 特にベトナムにいる間は運動をたくさんしていました。
 
